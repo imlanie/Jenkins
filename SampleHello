@@ -1,7 +1,8 @@
+// simplify labels
 pipeline {
     agent any
     stages {
-        stage('Developer Unit Test') {
+        stage('Test') {
             steps {
                 echo 'Unit Testing...'
 	   	// sh (pipeline step to execute a shell command)
@@ -12,12 +13,12 @@ pipeline {
 
        		 }  	
 
-	stage('QA/Staging') {
+	stage('QA') {
 	   steps {
 	          echo 'QA/Staging Environment'
 		  }
 		  }
-	stage('Stage to Production'){
+	stage('Production'){
 
 	     steps {
 	           echo 'Deployed'
