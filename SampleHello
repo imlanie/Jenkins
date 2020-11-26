@@ -1,20 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Developer Unit Test') {
             steps {
-                echo 'Hello World'
-		
-            }
-        }
+                echo 'Unit Testing...'
+	   	}
+       		 }  	
 
-	stage('Test') {
+	stage('QA/Staging') {
 	   steps {
-	          echo 'Testing..'
+	          echo 'QA/Staging Environment'
 		  }
 		  }
+	stage('Stage to Production'){
 
+	     steps {
+	           echo 'Deployed'
+		   }
 
-    }
+    		}
 }
-
+}
