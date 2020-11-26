@@ -4,7 +4,7 @@ pipeline {
         stage('Developer Unit Test') {
             steps {
                 echo 'Unit Testing...'
-	   	# sh (pipeline step to execute a shell command)
+	   	// sh (pipeline step to execute a shell command)
 		     
 
 		}
