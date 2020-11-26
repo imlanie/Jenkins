@@ -3,18 +3,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Dev Unit Test') {
-            steps {
-                echo 'Hello this is Unit Testing'
-            }
-        }
+        stage ('Unit Test')
 
-	stage('QA') {
+	steps {
+	       echo 'Hello, Unit Test'
+	       sh  'java -version'
+	       }
 
-	steps { echo 'Hello this is QA'
+	       }
+	 stage('QA')
+
+	 steps  {
+	    	echo 'Hello, QA'
+		}
 
 	}
-
-    }
 }
-
