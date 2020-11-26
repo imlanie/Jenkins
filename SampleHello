@@ -9,12 +9,6 @@ pipeline {
 	       sh  'java -version'
 	       }
 
-	       
-	 stage('QA')
-
-	 steps  {
-	    	echo 'Hello, QA'
-		}
-
+	    
 	}
 }
