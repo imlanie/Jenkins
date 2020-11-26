@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello again World'
+                echo 'Hello World Poll Git'
             }
         }
     }
