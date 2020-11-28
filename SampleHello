@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('NP3 Deployment') {
+        stage('Deploy to Sandbox') {
             steps {
                 echo 'Unit Testing...'
 	   	// sh (pipeline step to execute a shell command)
@@ -13,7 +13,7 @@ pipeline {
 
        		 }  	
 
-	stage('QA Deployment') {
+	stage('NP3 Deployment') {
 	   steps {
 	          echo 'QA/Staging Environment'
 		  }
@@ -21,7 +21,7 @@ pipeline {
 	stage('Production Deployment'){
 
 	     steps {
-	           echo 'Deployed'
+	           echo 'Deployed to NP3'
 		   }
 
     		}
