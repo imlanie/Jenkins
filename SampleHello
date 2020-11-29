@@ -18,7 +18,7 @@ pipeline {
 	
             steps {
 	    
-	        bat 'scp -i myExamPrepKP.pem README.md ec2-13-52-216-248.us-west-1.compute.amazonaws.com:~/.'
+	        bat 'scp -i myExamPrepKP.pem README.md ec2-user@ec2-13-52-216-248.us-west-1.compute.amazonaws.com:~/.'
                 echo 'More Unit Testing...'
 	   	script {
 		
