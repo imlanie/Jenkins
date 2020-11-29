@@ -1,0 +1,29 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('NP3 Deployment') {
+            steps {
+                echo 'Unit Testing...'
+	   	// sh (pipeline step to execute a shell command)
+		     
+
+		}
+
+
+       		 }  	
+
+	stage('QA Deployment') {
+	   steps {
+	          echo 'QA/Staging Environment'
+		  }
+		  }
+	stage('Production Deployment'){
+
+	     steps {
+	           echo 'Deployed'
+		   }
+
+    		}
+}
+}
