@@ -8,7 +8,7 @@ pipeline {
 	   	script {
 		
 		//sh "scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/."
-		sh "echo > newfile.txt"
+		echo 'Hello'
 		
 		}
 		//scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/.
