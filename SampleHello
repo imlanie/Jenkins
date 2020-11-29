@@ -27,7 +27,7 @@ pipeline {
 	   	script {
 		
 		//bat "pscp -i myExamPrepKP.ppk statement.pdf ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html"
-		bat 'scp -i myExamPrepKP.ppk README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
+		bat 'pscp -i myExamPrepKP.ppk README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
 		
 		}
 		//scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/.
