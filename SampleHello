@@ -5,7 +5,11 @@ pipeline {
         stage('Deploy to Sandbox') {
             steps {
                 echo 'More Unit Testing...'
-	   	// sh (pipeline step to execute a shell command)
+	   	script {
+		
+		sh "scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/."
+		
+		}
 		//scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/.
 		 archiveArtifacts artifacts: 'README.md', followSymlinks: false   
 	
