@@ -16,11 +16,11 @@ pipeline {
 	
             steps {
 	    
-	        scp -i 'c:\Users\Elaine\Downloads\myExamPrepKP.pem README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
+	        //scp -i 'c:\Users\Elaine\Downloads\myExamPrepKP.pem README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
                 echo 'More Unit Testing...'
 	   	script {
 		
-		//sh "scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/."
+		bat "scp -i myExamPrepKP.pem statement.pdf ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html"
 		echo 'Hello'
 		bat 'Java -version'
 		
