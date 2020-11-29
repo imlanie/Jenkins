@@ -2,18 +2,46 @@
 pipeline {
     agent any
     stages {
-        stage('NP3 Deployment') {
+        stage('Deploy to Sandbox') {
+	
+	
+	
+	
             steps {
-                echo 'Unit Testing...'
-	   	// sh (pipeline step to execute a shell command)
-		     
+	    
+	        
+		echo 'Hello'
+		//bat 'Java -version'
+		//bat 'pscp -i README.md READYOU.md'
+		
+		
+		
+                echo 'More Unit Testing...'
+	   	script {
+		
+		//bat "pscp -i myExamPrepKP.ppk statement.pdf ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html"
+		bat 'echo y | pscp -i myExamPrepKP.ppk README.md ec2-user@ec2-18-144-99-1.us-west-1.compute.amazonaws.com:/var/www/html'
+		
+		 input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+	           }
+		
+		}
+		//scp -i myExamPrepKP.pem statement.pdf ec2-user@ec2-3-101-154-17.us-west-1.compute.amazonaws.com:~/.
+		 archiveArtifacts artifacts: 'README.md', followSymlinks: false   
+	
 
 		}
 
 
        		 }  	
 
-	stage('QA Deployment') {
+	stage('NP3 Deployment') {
 	   steps {
 	          echo 'QA/Staging Environment'
 		  }
@@ -21,7 +49,7 @@ pipeline {
 	stage('Production Deployment'){
 
 	     steps {
-	           echo 'Deployed'
+	           echo 'Deployed to NP3'
 		   }
 
     		}
