@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Unit Testing...'
 	   	// sh (pipeline step to execute a shell command)
-		archiveArtifacts artifacts: 'dist/test.zip'     
+		archiveArtifacts artifacts: 'PipelineDevToProd'     
 
 		}
 
