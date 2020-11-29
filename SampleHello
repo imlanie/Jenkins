@@ -20,7 +20,7 @@ pipeline {
 	   	script {
 		
 		//bat "pscp -i myExamPrepKP.ppk statement.pdf ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html"
-		bat 'pscp -batch myExamPrepKP.ppk README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
+		bat 'pscp -i myExamPrepKP.ppk README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
 		
 		 input {
                 message "Should we continue?"
