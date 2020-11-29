@@ -14,9 +14,7 @@ pipeline {
 		
 		
             }
-	steps {
-                echo "Hello, ${PERSON}, nice to meet you."
-            }
+	
 	
             steps {
                 echo 'More Unit Testing...'
