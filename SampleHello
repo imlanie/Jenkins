@@ -5,7 +5,10 @@ pipeline {
         stage('Deploy to Sandbox') {
 	
 	environment { 
-                AN_ACCESS_KEY = credentials('myExamPrepPK') 
+                //AN_ACCESS_KEY = credentials('myExamPrepPK') 
+		environment {
+                SSH_CREDS = credentials('ec2-user')
+            }
             }
 	
 	
