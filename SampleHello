@@ -16,7 +16,7 @@ pipeline {
 	
             steps {
 	    
-	        bat 'scp -i c:\Users\Elaine\Downloads\myExamPrepKP.pem README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
+	        scp -i 'c:\Users\Elaine\Downloads\myExamPrepKP.pem README.md ec2-52-53-219-73.us-west-1.compute.amazonaws.com:/var/www/html'
                 echo 'More Unit Testing...'
 	   	script {
 		
