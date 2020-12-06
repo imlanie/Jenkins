@@ -7,7 +7,7 @@ pipeline {
                     {
                    
                          environment { 
-                                SSH_CREDS = credentials('/c/Users/Elaine/Downloads/myExamPrepKP.ppk')
+                                SSH_CREDS = credentials('myExamPrepKP')
                                 }
                         
                        steps {
