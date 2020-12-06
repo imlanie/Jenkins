@@ -21,6 +21,13 @@ pipeline {
         
             //end stages
             }
+    
+            post { 
+                always { 
+                    echo 'Pipeline completed successfully.'
+                }
+            }
+            //end post
         
     //end pipeline
     }
