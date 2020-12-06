@@ -1,12 +1,14 @@
 
 
 def remote = [name: 'jenkins-1', host: 'ec2-54-193-135-64.us-west-1.compute.amazonaws.com', user: 'ec2-user', allowAnyHosts: true]
-withCredentials([sshUserPrivateKey(credentialsId: 'e789c80b-15ce-46e7-b216-9cf66cd0e2e3', usernameVariable: 'ec2-user')])
+
 pipeline {
     agent any
     stages {
         stage('NP3 Deployment') {
             steps {
+	    
+	    withCredentials([sshUserPrivateKey(credentialsId: 'e789c80b-15ce-46e7-b216-9cf66cd0e2e3', usernameVariable: 'ec2-user')])
                 echo 'Unit Testing...'
 	   	//pscp -v -i /c/Users/Elaine/Downloads/myExamPrepKP.ppk index.html ec2-user@ec2-54-193-135-64.us-west-1.compute.amazonaws.com:/var/www/html/index.html   
 		sshCommand remote: remote, command: 'sudo echo y'
