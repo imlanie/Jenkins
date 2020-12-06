@@ -1,6 +1,11 @@
 #!/bin/bash
 pipeline {
     agent any 
+    
+           parameters
+                {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
         stages {
                 stage('Deploy to NP3') 
             
@@ -18,7 +23,7 @@ pipeline {
                 //sh 'echo "SSH user is $SSH_CREDS_USR"'
                 //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
                            echo 'successfully deployed to NP3'
-                           sh 'printenv'
+                           echo "Hello ${params.PERSON}"
             } 
                         
                         //steps {
