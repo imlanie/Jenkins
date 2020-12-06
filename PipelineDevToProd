@@ -1,12 +1,12 @@
 
 
-def remote = [name: 'jenkins-1', host: 'ec2-54-193-135-64.us-west-1.compute.amazonaws.com', user: 'ec2-user', allowAnyHosts: true]
+def remote = [name: 'jenkins-1', host: 'ec2-54-193-135-64.us-west-1.compute.amazonaws.com', user: 'jenkins', allowAnyHosts: true]
 
 pipeline {
     agent any
     stages {
         stage('NP3 Deployment') {
-            steps { withCredentials([sshUserPrivateKey(credentialsId: 'e789c80b-15ce-46e7-b216-9cf66cd0e2e3', usernameVariable: 'ec2-user')])
+            steps { withCredentials([sshUserPrivateKey(credentialsId: '15eea119-217a-4766-a347-77b69ace0093', usernameVariable: 'jenkins')])
 	    }
 	    {
                 echo 'Unit Testing...'
