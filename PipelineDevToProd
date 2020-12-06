@@ -5,9 +5,7 @@
 pipeline {
     agent any
     stages {
-        stage('NP3 Deployment') {
-            steps { withCredentials([sshUserPrivateKey(credentialsId: '15eea119-217a-4766-a347-77b69ace0093', usernameVariable: 'jenkins')])
-	    }
+        stage('NP3 Deployment') 
 	    {
                 echo 'Unit Testing...'
 	   	//pscp -v -i /c/Users/Elaine/Downloads/myExamPrepKP.ppk index.html ec2-user@ec2-54-193-135-64.us-west-1.compute.amazonaws.com:/var/www/html/index.html   
