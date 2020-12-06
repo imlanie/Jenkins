@@ -1,9 +1,13 @@
 
 
 
-
+// Declarative
 pipeline {
     agent any
+    
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
         stage('NP3 Deployment') 
 	    {
