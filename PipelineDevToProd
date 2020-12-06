@@ -1,6 +1,6 @@
 
 
-def remote = [name: 'jenkins-1', host: 'ec2-user@ec2-54-193-135-64.us-west-1.compute.amazonaws.com', user: 'ec2-user', allowAnyHosts: true]
+def remote = [name: 'jenkins-1', host: 'ec2-54-193-135-64.us-west-1.compute.amazonaws.com', user: 'ec2-user', allowAnyHosts: true]
 
 pipeline {
     agent any
@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Unit Testing...'
 	   	//pscp -v -i /c/Users/Elaine/Downloads/myExamPrepKP.ppk index.html ec2-user@ec2-54-193-135-64.us-west-1.compute.amazonaws.com:/var/www/html/index.html   
-		sshCommand remote: remote, command: 'echo y'
+		sshCommand remote: remote, command: 'sudo echo y'
 		}
 
 
