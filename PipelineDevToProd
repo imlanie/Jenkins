@@ -1,6 +1,6 @@
 
 
-def remote = [name: 'EC2_ec2-user', host: '54.193.135.64', user: 'ec2-user', allowAnyHosts: false]
+def remote = [name: 'EC2_ec2-user', host: '54.193.135.64', user: 'ec2-user', allowAnyHosts: true]
 
 pipeline {
     agent any
