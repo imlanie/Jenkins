@@ -1,6 +1,6 @@
 
 
-def remote = [name: 'EC2_ec2-user', host: '54.193.135.64', user: 'ec2-user', allowAnyHosts: true]
+
 
 pipeline {
     agent any
@@ -11,7 +11,7 @@ pipeline {
 	    {
                 echo 'Unit Testing...'
 	   	//pscp -v -i /c/Users/Elaine/Downloads/myExamPrepKP.ppk index.html ec2-user@ec2-54-193-135-64.us-west-1.compute.amazonaws.com:/var/www/html/index.html   
-		sshCommand remote: remote, command: 'cd /var/www'
+		//sshCommand remote: remote, command: 'cd /var/www'
 		}
 
 
