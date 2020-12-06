@@ -4,7 +4,7 @@ pipeline {
     
            parameters
                 {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    string(name: 'CHG_NUMBER', defaultValue: 'CHG', description: 'Enter Change Ticket Number:')
                 }
         stages {
                 stage('Deploy to NP3') 
@@ -12,7 +12,7 @@ pipeline {
                     {
                         
                         when {
-                            branch 'test'
+                            branch 'NP3'
                         }
                    
                          environment { 
@@ -26,8 +26,8 @@ pipeline {
                 //sh 'echo "SSH private key is located at $SSH_CREDS"'
                 //sh 'echo "SSH user is $SSH_CREDS_USR"'
                 //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
-                           echo 'successfully deployed to NP3'
-                           echo "Hello ${params.PERSON}"
+                 echo 'successfully deployed to NP3'
+                
             } 
                         
                         //steps {
@@ -36,11 +36,17 @@ pipeline {
                        // }
                     }
             
-                stage('Deploy to QA') 
+                stage('Deploy to Prod') 
                         {
+                            
+                            when {
+                            branch 'main'
+                        }
+                            
                         steps {
                         //sh 'python --version'
-                        echo 'successfully deployed to QA'
+                        echo 'successfully deployed to Prod'
+                        echo "Change Number:  ${params.CHG_NUMBER}"
                             }
                         }
                
