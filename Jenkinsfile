@@ -7,7 +7,7 @@ pipeline {
                     {
                    
                          environment { 
-                                AN_ACCESS_KEY = credentials('ec2-user') 
+                                SSH_CREDS = credentials('ec2-user') 
                                 }
                         
                         
