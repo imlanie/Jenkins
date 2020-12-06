@@ -12,7 +12,7 @@ pipeline {
                     {
                         
                         when {
-                            branch 'NP3'
+                            branch 'main'
                         }
                    
                          environment { 
