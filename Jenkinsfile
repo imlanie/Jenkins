@@ -1,4 +1,4 @@
-#!/bin/bash
+
 pipeline {
     agent any 
     stages {
@@ -13,8 +13,9 @@ pipeline {
                 echo 'successfully deployed to Staging/QA'
             }       
      
-            
+        }    
             
         }
     }
+}
 
