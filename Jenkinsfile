@@ -7,7 +7,7 @@ pipeline {
                     {
                    
                          environment { 
-                                SSH_CREDS = credentials('EC2_ec2-user') 
+                                SSH_CREDS = credentials('e789c80b-15ce-46e7-b216-9cf66cd0e2e3') 
                                 }
                         
                         
