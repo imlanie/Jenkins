@@ -12,7 +12,7 @@ pipeline {
                     {
                         
                         when {
-                            branch 'main'
+                            branch 'test'
                         }
                    
                          environment { 
