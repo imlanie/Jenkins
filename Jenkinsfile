@@ -3,6 +3,11 @@ pipeline {
     agent any 
         stages {
                 stage('Deploy to NP3') 
+            
+                    environment { 
+                                AN_ACCESS_KEY = credentials('ec2-user') 
+                                }
+            
                     {
                     steps {
                     //sh 'python --version'
