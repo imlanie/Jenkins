@@ -7,7 +7,7 @@ pipeline {
                     {
                    
                          environment { 
-                                SERVICE_CREDS = credentials('my-predefined-username-password')
+                                SSH_CREDS = credentials('myExamPrepPPK')
                                 }
                         
                         
