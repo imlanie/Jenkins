@@ -7,8 +7,10 @@ pipeline {
                     steps {
                 //sh 'python --version'
                     echo 'successfully deployed to NP3'
+                        }
                     }
                 }
-        }
-        }
+        
+//end pipeline
+}
 
