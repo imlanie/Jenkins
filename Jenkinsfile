@@ -10,6 +10,10 @@ pipeline {
                 stage('Deploy to NP3') 
             
                     {
+                        
+                        when {
+                            branch 'main'
+                        }
                    
                          environment { 
                                 SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
