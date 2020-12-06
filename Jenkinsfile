@@ -7,7 +7,8 @@ pipeline {
                     {
                    
                          environment { 
-                                SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
+                                //SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
+                             SSH_CREDS = credentials('ec2_13.57.227.191_jenkins_user')
                                        //AN_ACCESS_KEY = credentials('my-predefined-secret-text') 
                                        //SERVICE_CREDS = credentials('my-predefined-username-password')  //Example Username/Password
                                 }
