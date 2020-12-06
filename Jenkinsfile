@@ -4,12 +4,15 @@ pipeline {
         stages {
                 stage('Deploy to NP3') 
             
-                    environment { 
+                    {
+                   
+                         environment { 
                                 AN_ACCESS_KEY = credentials('ec2-user') 
                                 }
-            
-                    {
-                    steps {
+                        
+                        
+                        
+                        steps {
                     //sh 'python --version'
                     echo 'successfully deployed to NP3'
                         }
