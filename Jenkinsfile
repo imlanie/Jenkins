@@ -9,6 +9,6 @@ pipeline {
                     echo 'successfully deployed to NP3'
                     }
                 }
-            
+        }
         }
 
