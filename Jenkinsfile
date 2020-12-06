@@ -11,9 +11,9 @@ pipeline {
             
                     {
                         
-                        when {
-                            branch 'main'
-                        }
+                        //when {
+                         //   branch 'main'
+                       // }
                    
                          environment { 
                                 SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
@@ -39,9 +39,9 @@ pipeline {
                 stage('Deploy to Prod') 
                         {
                             
-                            when {
-                            branch 'main'
-                        }
+                       //     when {
+                       //     branch 'main'
+                       // }
                             
                         steps {
                         //sh 'python --version'
