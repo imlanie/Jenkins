@@ -7,13 +7,15 @@ pipeline {
                     {
                    
                          environment { 
-                                SSH_CREDS = credentials('myExamPrepPPK')
+                                SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
+                                       //AN_ACCESS_KEY = credentials('my-predefined-secret-text') 
+                                       //SERVICE_CREDS = credentials('my-predefined-username-password')  //Example Username/Password
                                 }
                         
                        steps {
                 //sh 'echo "SSH private key is located at $SSH_CREDS"'
-                sh 'echo "SSH user is $SSH_CREDS_USR"'
-                sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
+                //sh 'echo "SSH user is $SSH_CREDS_USR"'
+                //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
                            echo 'successfully deployed to NP3'
             } 
                         
