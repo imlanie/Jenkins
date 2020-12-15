@@ -45,11 +45,11 @@ pipeline {
                 stage('Deploy to Prod') 
                         {
                             
-                      //  {
+                        {
                         
-                        when {
-                            branch 'main'
-                        }
+                      //  when {
+                       //     branch 'main'
+                       // }
                             
                         steps {
                         //sh 'python --version'
