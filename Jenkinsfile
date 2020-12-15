@@ -41,7 +41,7 @@ pipeline {
                             
                           // ensure that branch is main
                             when {
-                          branch 'this'
+                          branch 'main'
                         }
                             
                         steps {
