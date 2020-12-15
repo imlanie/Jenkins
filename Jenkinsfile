@@ -41,11 +41,12 @@ pipeline {
                             
                           // ensure that branch is main
                             when {
-                          branch 'main'
+                          branch 'this'
                         }
                             
                         steps {
                         
+                            echo "${branch.name}"
                             sh 'python --version'
                         echo 'Successfully deployed to Prod'
                         echo "Change Number:  ${params.CHG_NUMBER}"
