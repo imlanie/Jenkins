@@ -11,10 +11,9 @@ pipeline {
             
                     {
                         
-                                   
-                        //when {
-                         //   branch 'main'
-                       // }
+                        when {
+                            branch 'main'
+                        }
                    
                          environment { 
                                 SSH_CREDS = credentials('myExamPrepPPK') // ssh username with private key
