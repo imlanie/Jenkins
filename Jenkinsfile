@@ -11,6 +11,9 @@ pipeline {
             
                     {
                         
+                        //sh ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’  https://medium.com/@weblab_tech/how-to-publish-artifacts-in-jenkins-f021b17fde71
+                        
+                        sh 'echo "Deployed to NP3"'
                         //when {
                          //   branch 'main'
                        // }
