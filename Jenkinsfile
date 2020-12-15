@@ -12,8 +12,7 @@ pipeline {
                     {
                         
                         //sh ‘ssh user@server rm -rf /var/www/temp_deploy/dist/’  https://medium.com/@weblab_tech/how-to-publish-artifacts-in-jenkins-f021b17fde71
-                        
-                        sh 'echo "Deployed to NP3"'
+                                   
                         //when {
                          //   branch 'main'
                        // }
@@ -29,6 +28,8 @@ pipeline {
                 //sh 'echo "SSH private key is located at $SSH_CREDS"'
                 //sh 'echo "SSH user is $SSH_CREDS_USR"'
                 //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
+                           echo "${SSH_CREDS}"
+                           
                  echo 'Successfully deployed to NP3'
                 
             } 
