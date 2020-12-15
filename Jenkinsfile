@@ -39,7 +39,7 @@ pipeline {
                 stage('Deploy to Prod') 
                         {
                             
-                           ensure that branch is main
+                          // ensure that branch is main
                             when {
                           branch 'main'
                         }
