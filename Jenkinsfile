@@ -41,9 +41,9 @@ pipeline {
                             
                         //{
                         
-                      //  when {
-                       //     branch 'main'
-                       // }
+                        when {
+                            branch 'main'
+                        }
                             
                         steps {
                         //sh 'python --version'
