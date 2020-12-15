@@ -39,15 +39,15 @@ pipeline {
                 stage('Deploy to Prod') 
                         {
                             
-                          // ensure that branch is main
-                         //   when {
-                          //branch 'main'
-                        //}
+                           ensure that branch is main
+                            when {
+                          branch 'main'
+                        }
                             
                         steps {
                         
                            // echo "${branch.name}"
-                            sh 'python --version'
+                           // sh 'python --version'
                         echo 'Successfully deployed to Prod'
                         echo "Change Number:  ${params.CHG_NUMBER}"
                         
