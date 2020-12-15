@@ -39,7 +39,7 @@ pipeline {
                 stage('Deploy to Prod') 
                         {
                             
-                        {
+                        //{
                         
                       //  when {
                        //     branch 'main'
