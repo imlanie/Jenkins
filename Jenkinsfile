@@ -40,9 +40,9 @@ pipeline {
                         {
                             
                           // ensure that branch is main
-                            when {
-                          branch 'main'
-                        }
+                        //    when {
+                        //  branch 'main'
+                       // }
                             
                         steps {
                         
