@@ -52,7 +52,7 @@ pipeline {
                         //sh 'python --version'
                         echo 'Successfully deployed to Prod'
                         echo "Change Number:  ${params.CHG_NUMBER}"
-                        echo "Authorized:     ${SSH_CREDS}"
+                        
                             
                             }
                         }
