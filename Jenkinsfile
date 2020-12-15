@@ -24,9 +24,15 @@ pipeline {
                                 }
                         
                        steps {
-                //sh 'echo "SSH private key is located at $SSH_CREDS"'
-                //sh 'echo "SSH user is $SSH_CREDS_USR"'
-                //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
+                           
+                           
+                           //scp filetocopy.txt z_lnd_etl_svc@np3lndnjsvr01v:/opt/lending/etl/
+                           //scp -r /workspace/directorypath z_lnd_etl_svc@np3lndnjsvr01v:/opt/lending/etl/  // to copy a whole directory instead 
+                             echo 'this is where the file transfer will take place from the jenkins workspace to the NP3 server' 
+                           //sh 'echo "SSH private key is located at $SSH_CREDS"'
+                              
+                           //sh 'echo "SSH user is $SSH_CREDS_USR"'
+                             //sh 'echo "SSH passphrase is $SSH_CREDS_PSW"'
                            echo "${SSH_CREDS}"
                            
                             echo "${SSH_CREDS_USR}"
