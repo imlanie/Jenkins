@@ -46,7 +46,7 @@ pipeline {
                             
                         steps {
                         
-                            echo "${branch.name}"
+                           // echo "${branch.name}"
                             sh 'python --version'
                         echo 'Successfully deployed to Prod'
                         echo "Change Number:  ${params.CHG_NUMBER}"
