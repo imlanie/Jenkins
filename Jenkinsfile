@@ -42,7 +42,7 @@ pipeline {
                         //{
                         
                         when {
-                            branch ''
+                            branch 'this'
                         }
                             
                         steps {
