@@ -22,7 +22,7 @@ pipeline {
                            //scp -r /workspace/directorypath z_lnd_etl_svc@np3lndnjsvr01v:/opt/lending/etl/  // to copy a whole directory instead 
                              echo 'this is where the file transfer will take place from the jenkins workspace to the NP3 server' 
                        
-                       pscp -v -i c:\Users\Elaine\Downloads\NorCalDecember.ppk index.html ec2-user@ec2-13-52-230-121.us-west-1.compute.amazonaws.com:/var/www/html/index.html
+                       //does not work pscp -v -i c:\Users\Elaine\Downloads\NorCalDecember.ppk index.html ec2-user@ec2-13-52-230-121.us-west-1.compute.amazonaws.com:/var/www/html/index.html
                            //sh 'echo "SSH private key is located at $SSH_CREDS"'
                               
                            //sh 'echo "SSH user is $SSH_CREDS_USR"'
